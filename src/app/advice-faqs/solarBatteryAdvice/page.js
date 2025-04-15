@@ -1,5 +1,3 @@
-'use client';
-
 import PageTemplate from "@/components/PageTemplate";
 
 export default function SolarBatteryAdvice() {
@@ -10,7 +8,7 @@ export default function SolarBatteryAdvice() {
     },
     {
       question: "What are the benefits of adding battery storage?",
-      answer: "Battery storage allows you to store excess solar energy for use when the sun isn't shining. This increases your energy independence, reduces reliance on the grid, and can provide backup power during outages."
+      answer: "Battery storage allows you to store excess solar energy for use when the sun isn&apos;t shining. This increases your energy independence, reduces reliance on the grid, and can provide backup power during outages."
     },
     {
       question: "How long do solar panels last?",
@@ -23,12 +21,12 @@ export default function SolarBatteryAdvice() {
   ];
 
   return (
-    <PageTemplate title="Solar & Battery Advice">
+    <PageTemplate title="Solar &amp; Battery Advice">
       <div className="space-y-8">
         <div className="prose max-w-none">
           <p className="text-lg text-gray-600">
-            Get expert advice on solar panels and battery storage systems. Whether you're considering 
-            installation or want to optimize your existing system, we're here to help you make informed 
+            Get expert advice on solar panels and battery storage systems. Whether you&apos;re considering 
+            installation or want to optimize your existing system, we&apos;re here to help you make informed 
             decisions about renewable energy.
           </p>
         </div>
@@ -38,19 +36,19 @@ export default function SolarBatteryAdvice() {
             <h3 className="text-xl font-semibold text-green-800 mb-4">Solar System Basics</h3>
             <ul className="space-y-3 text-gray-600">
               <li className="flex items-start">
-                <span className="text-green-600 mr-2">•</span>
+                <span className="text-green-600 mr-2">&bull;</span>
                 <span>Understanding solar panel efficiency</span>
               </li>
               <li className="flex items-start">
-                <span className="text-green-600 mr-2">•</span>
+                <span className="text-green-600 mr-2">&bull;</span>
                 <span>Types of solar panels available</span>
               </li>
               <li className="flex items-start">
-                <span className="text-green-600 mr-2">•</span>
+                <span className="text-green-600 mr-2">&bull;</span>
                 <span>Inverter options and selection</span>
               </li>
               <li className="flex items-start">
-                <span className="text-green-600 mr-2">•</span>
+                <span className="text-green-600 mr-2">&bull;</span>
                 <span>System sizing and optimization</span>
               </li>
             </ul>
@@ -60,19 +58,19 @@ export default function SolarBatteryAdvice() {
             <h3 className="text-xl font-semibold text-green-800 mb-4">Battery Storage Guide</h3>
             <ul className="space-y-3 text-gray-600">
               <li className="flex items-start">
-                <span className="text-green-600 mr-2">•</span>
+                <span className="text-green-600 mr-2">&bull;</span>
                 <span>Types of battery technologies</span>
               </li>
               <li className="flex items-start">
-                <span className="text-green-600 mr-2">•</span>
+                <span className="text-green-600 mr-2">&bull;</span>
                 <span>Capacity and power ratings</span>
               </li>
               <li className="flex items-start">
-                <span className="text-green-600 mr-2">•</span>
+                <span className="text-green-600 mr-2">&bull;</span>
                 <span>Battery lifespan and warranties</span>
               </li>
               <li className="flex items-start">
-                <span className="text-green-600 mr-2">•</span>
+                <span className="text-green-600 mr-2">&bull;</span>
                 <span>Integration with solar systems</span>
               </li>
             </ul>

@@ -6,9 +6,9 @@ export default function AboutUs() {
       <div className="space-y-8">
         <div className="prose max-w-none">
           <p className="text-lg text-gray-600">
-            ZeroTek is a leading provider of sustainable energy solutions, dedicated to helping homes and businesses 
-            transition to cleaner, more efficient energy systems. With over a decade of experience, we've become 
-            a trusted name in solar, battery, and electrical solutions.
+            ZeroTek is a leading provider of sustainable energy solutions, dedicated to helping businesses and homeowners make the 
+            transition to cleaner, more efficient energy systems. With over a decade of experience, we&apos;ve become
+            a trusted name in the industry, known for our expertise, reliability, and commitment to customer satisfaction.
           </p>
         </div>
 
@@ -16,16 +16,16 @@ export default function AboutUs() {
           <div className="bg-green-50 p-8 rounded-lg">
             <h3 className="text-xl font-semibold text-green-800 mb-4">Our Mission</h3>
             <p className="text-gray-600">
-              To empower our customers with sustainable energy solutions that reduce costs, 
-              minimize environmental impact, and create a cleaner future for generations to come.
+              To empower our customers with sustainable energy solutions that reduce costs, minimize environmental impact, 
+              and create a better future for generations to come.
             </p>
           </div>
 
           <div className="bg-green-50 p-8 rounded-lg">
             <h3 className="text-xl font-semibold text-green-800 mb-4">Our Vision</h3>
             <p className="text-gray-600">
-              To be the leading force in the transition to sustainable energy, 
-              making clean power accessible and affordable for everyone.
+              To be the leading force in the transition to sustainable energy, driving innovation and setting new standards 
+              for excellence in the renewable energy sector.
             </p>
           </div>
         </div>
@@ -43,7 +43,7 @@ export default function AboutUs() {
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <h4 className="text-lg font-semibold text-green-800 mb-3">Customer Focus</h4>
-              <p className="text-gray-600">Putting our customers' needs at the center of everything we do</p>
+              <p className="text-gray-600">Putting our customers&apos; needs at the center of everything we do</p>
             </div>
           </div>
         </div>

@@ -33,9 +33,8 @@ export default function Careers() {
       <div className="space-y-8">
         <div className="prose max-w-none">
           <p className="text-lg text-gray-600">
-            Join our team of passionate professionals dedicated to making sustainable energy 
-            accessible to everyone. At ZeroTek, we offer exciting career opportunities in 
-            a growing industry that's shaping the future of energy.
+            Join ZeroTek and be part of a team that&apos;s making a real difference in the world. We&apos;re looking for passionate 
+            individuals who want to contribute to a growing industry that&apos;s shaping the future of energy.
           </p>
         </div>
 
@@ -45,19 +44,19 @@ export default function Careers() {
             <ul className="space-y-3 text-gray-600">
               <li className="flex items-start">
                 <span className="text-green-600 mr-2">•</span>
-                <span>Competitive salary and benefits</span>
+                <span>Competitive salaries and benefits package</span>
               </li>
               <li className="flex items-start">
                 <span className="text-green-600 mr-2">•</span>
-                <span>Professional development opportunities</span>
+                <span>Opportunities for professional growth and development</span>
               </li>
               <li className="flex items-start">
                 <span className="text-green-600 mr-2">•</span>
-                <span>Work on cutting-edge technology</span>
+                <span>Work on cutting-edge renewable energy projects</span>
               </li>
               <li className="flex items-start">
                 <span className="text-green-600 mr-2">•</span>
-                <span>Make a positive environmental impact</span>
+                <span>Make a positive impact on the environment</span>
               </li>
             </ul>
           </div>
@@ -67,19 +66,19 @@ export default function Careers() {
             <ul className="space-y-3 text-gray-600">
               <li className="flex items-start">
                 <span className="text-green-600 mr-2">•</span>
-                <span>Innovative and forward-thinking</span>
+                <span>Collaborative and supportive work environment</span>
               </li>
               <li className="flex items-start">
                 <span className="text-green-600 mr-2">•</span>
-                <span>Collaborative work environment</span>
+                <span>Focus on innovation and continuous improvement</span>
               </li>
               <li className="flex items-start">
                 <span className="text-green-600 mr-2">•</span>
-                <span>Commitment to sustainability</span>
+                <span>Commitment to sustainability and environmental responsibility</span>
               </li>
               <li className="flex items-start">
                 <span className="text-green-600 mr-2">•</span>
-                <span>Focus on work-life balance</span>
+                <span>Regular team events and social activities</span>
               </li>
             </ul>
           </div>
@@ -93,16 +92,16 @@ export default function Careers() {
                 <div className="flex justify-between items-start">
                   <div>
                     <h4 className="text-lg font-semibold text-green-800">{position.title}</h4>
-                    <div className="flex items-center mt-2 text-sm text-gray-500">
+                    <div className="flex items-center mt-2 text-sm text-gray-600">
                       <span className="mr-4">{position.type}</span>
                       <span>{position.location}</span>
                     </div>
                   </div>
-                  <button className="bg-green-600 text-white px-4 py-2 rounded-md text-sm font-semibold hover:bg-green-700 transition-colors duration-200">
+                  <button className="bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700 transition-colors duration-200">
                     Apply Now
                   </button>
                 </div>
-                <p className="text-gray-600 mt-4">{position.description}</p>
+                <p className="mt-4 text-gray-600">{position.description}</p>
               </div>
             ))}
           </div>

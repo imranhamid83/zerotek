@@ -10,7 +10,7 @@ export default function GeneralFAQs() {
     },
     {
       question: "How long does a typical installation take?",
-      answer: "Installation times vary depending on the project. Residential solar installations typically take 1-2 days, while commercial projects may take several weeks. We'll provide a detailed timeline during the consultation phase."
+      answer: "Installation times vary depending on the project. Residential solar installations typically take 1-2 days, while commercial projects may take several weeks. We&apos;ll provide a detailed timeline during the consultation phase."
     },
     {
       question: "Do you offer financing options?",
@@ -35,8 +35,8 @@ export default function GeneralFAQs() {
       <div className="space-y-8">
         <div className="prose max-w-none">
           <p className="text-lg text-gray-600">
-            Find answers to common questions about our services, processes, and company. If you don't 
-            find what you're looking for, feel free to contact us directly for more information.
+            Find answers to common questions about our services, processes, and company. If you don&apos;t 
+            find what you&apos;re looking for, feel free to contact us directly for more information.
           </p>
         </div>
 

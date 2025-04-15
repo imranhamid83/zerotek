@@ -47,7 +47,7 @@ export default function ExpertAdvice() {
           <p className="text-lg text-gray-600">
             Access our comprehensive collection of guides, tips, and expert advice to help you 
             make informed decisions about your energy needs. From solar installations to electrical 
-            safety, we've got you covered.
+            safety, we&apos;ve got you covered.
           </p>
         </div>
 

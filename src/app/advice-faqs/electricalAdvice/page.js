@@ -6,18 +6,18 @@ export default function ElectricalAdvice() {
   const faqs = [
     {
       question: "What are the signs of electrical problems in my home?",
-      answer: "Common signs include frequent circuit breaker trips, flickering lights, burning smells, warm outlets, and unusual buzzing sounds. If you notice any of these, it's important to have a professional electrician inspect your system."
+      answer: "Common signs include frequent circuit breaker trips, flickering lights, burning smells, warm outlets, and unusual buzzing sounds. If you notice any of these, it&apos;s important to have a professional electrician inspect your system."
     },
     {
       question: "How often should I have my electrical system inspected?",
-      answer: "It's recommended to have a professional inspection every 3-5 years for residential properties, and more frequently for older homes or commercial buildings. Regular maintenance can prevent potential hazards and ensure optimal performance."
+      answer: "It&apos;s recommended to have a professional inspection every 3-5 years for residential properties, and more frequently for older homes or commercial buildings. Regular maintenance can prevent potential hazards and ensure optimal performance."
     },
     {
       question: "What should I look for in an electrical contractor?",
       answer: "Choose a licensed, insured contractor with good reviews and experience in your specific needs. They should provide clear quotes, proper documentation, and follow all safety regulations and building codes."
     },
     {
-      question: "How can I improve my home's electrical efficiency?",
+      question: "How can I improve my home&apos;s electrical efficiency?",
       answer: "Consider upgrading to LED lighting, installing smart thermostats, using energy-efficient appliances, and ensuring proper insulation. Regular maintenance and modernizing outdated systems can also significantly improve efficiency."
     }
   ];

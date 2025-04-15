@@ -31,9 +31,8 @@ export default function OurProjects() {
       <div className="space-y-8">
         <div className="prose max-w-none">
           <p className="text-lg text-gray-600">
-            Explore our portfolio of successful projects across residential, commercial, 
-            and industrial sectors. Each project showcases our commitment to quality, 
-            innovation, and sustainable energy solutions.
+            Explore our portfolio of successful projects that showcase our expertise in solar, battery, and electrical solutions. 
+            Each project represents our commitment to quality, innovation, and customer satisfaction.
           </p>
         </div>
 
@@ -42,13 +41,14 @@ export default function OurProjects() {
             <div key={index} className="bg-white rounded-lg shadow-sm overflow-hidden">
               <div className="md:flex">
                 <div className="md:w-1/3">
-                  <Image
-                    src={project.image}
-                    alt={project.title}
-                    width={400}
-                    height={300}
-                    className="w-full h-full object-cover"
-                  />
+                  <div className="relative h-64 md:h-full">
+                    <Image
+                      src={project.image}
+                      alt={project.title}
+                      fill
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
                 </div>
                 <div className="p-6 md:w-2/3">
                   <h3 className="text-xl font-semibold text-green-800 mb-2">{project.title}</h3>
@@ -62,10 +62,7 @@ export default function OurProjects() {
                   </div>
                   <div className="flex flex-wrap gap-2">
                     {project.features.map((feature, featureIndex) => (
-                      <span
-                        key={featureIndex}
-                        className="bg-green-50 text-green-800 px-3 py-1 rounded-full text-sm"
-                      >
+                      <span key={featureIndex} className="bg-green-50 text-green-800 px-3 py-1 rounded-full text-sm">
                         {feature}
                       </span>
                     ))}

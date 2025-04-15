@@ -102,7 +102,7 @@ const ProjectsSlider = () => {
                       href={project.href}
                       className="text-green-600 hover:text-green-700 font-semibold"
                     >
-                      View Project →
+                      View Project &rarr;
                     </Link>
                   </div>
                 </div>
@@ -144,7 +144,7 @@ const ProjectsSlider = () => {
               }
             }}
             className={`w-3 h-3 rounded-full transition-colors duration-200 ${
-              currentIndex === index ? 'bg-green-600' : 'bg-gray-300'
+              currentIndex === index ? "bg-green-600" : "bg-gray-300"
             }`}
             aria-label={`Go to slide ${index + 1}`}
           />
