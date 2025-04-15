@@ -1,7 +1,6 @@
 'use client';
 
 import Link from 'next/link';
-import Image from 'next/image';
 
 const Footer = () => {
   const menuItems = [
@@ -63,14 +62,11 @@ const Footer = () => {
         <div className="mt-12 pt-8 border-t border-gray-800">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="mb-4 md:mb-0">
-              <Link href="/" className="flex items-center justify-center md:justify-start">
-                <Image
-                  src="/images/logo.png"
-                  alt="ZeroTek Logo"
-                  width={180}
-                  height={50}
-                  className="h-12 w-auto"
-                />
+              <Link 
+                href="/contact" 
+                className="inline-block bg-green-600 text-white px-6 py-3 rounded-md font-medium hover:bg-green-700 transition-colors duration-200"
+              >
+                Contact Us
               </Link>
             </div>
             <div className="text-center md:text-right">
