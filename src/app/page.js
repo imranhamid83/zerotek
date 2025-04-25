@@ -4,6 +4,7 @@ import PageTemplate from "@/components/PageTemplate";
 import Image from "next/image";
 import Link from "next/link";
 import ProjectsSlider from "@/components/ProjectsSlider";
+import Carousel from '@/components/Carousel';
 
 export default function Home() {
   const services = [
@@ -20,10 +21,10 @@ export default function Home() {
       href: "/services/electrical"
     },
     {
-      title: "Expert Advice",
-      description: "Comprehensive guides and FAQs to help you make informed decisions.",
-      image: "/images/expert-advice.jpg",
-      href: "/services/expert-advice"
+      title: "Mechanical Ventilation with Heat Recovery (MVHR)",
+      description: "MVHR systems provide whole-house ventilation while recovering heat from extracted air...",
+      image: "/images/mvhr.jpg",
+      href: "/ventilation/mvhr"
     }
   ];
 
@@ -38,20 +39,9 @@ export default function Home() {
 
   return (
     <>
-      <div className="bg-green-600 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
-              Welcome to ZeroTek
-            </h1>
-            <p className="mt-6 text-xl max-w-3xl mx-auto">
-              Your trusted partner for solar, battery, and electrical solutions
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <PageTemplate title="Our Services">
+      <Carousel />
+      <PageTemplate>
+      <h2 className="text-3xl font-bold text-gray-900 mb-8">Our Services</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {services.map((service, index) => (
             <Link 
@@ -76,28 +66,14 @@ export default function Home() {
             </Link>
           ))}
         </div>
-      </PageTemplate>
 
-      <div className="bg-gray-50 py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900">Our Featured Projects</h2>
-            <p className="mt-4 text-lg text-gray-600">
-              Discover some of our recent successful installations
-            </p>
-          </div>
+        <div className="mt-16">
+          <h2 className="text-3xl font-bold text-gray-900 mb-8">Our Featured Projects</h2>
           <ProjectsSlider />
         </div>
-      </div>
 
-      <div className="bg-gray-50 py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900">Our Trusted Partners</h2>
-            <p className="mt-4 text-lg text-gray-600">
-              We work with industry-leading manufacturers to bring you the best solutions
-            </p>
-          </div>
+        <div className="mt-16">
+          <h2 className="text-3xl font-bold text-gray-900 mb-8">Our Trusted Partners</h2>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center">
             {partners.map((partner, index) => (
               <div key={index} className="flex items-center justify-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200">
@@ -112,7 +88,7 @@ export default function Home() {
             ))}
           </div>
         </div>
-      </div>
+      </PageTemplate>
     </>
   );
 }

@@ -3,6 +3,7 @@ import PageTemplate from "@/components/PageTemplate";
 export default function AboutUs() {
   return (
     <PageTemplate title="About ZeroTek">
+      
       <div className="space-y-8">
         <div className="prose max-w-none">
           <p className="text-lg text-gray-600">
@@ -11,7 +12,17 @@ export default function AboutUs() {
             a trusted name in the industry, known for our expertise, reliability, and commitment to customer satisfaction.
           </p>
         </div>
-
+ {/* Certificates & Trainings Section */}
+ <div className="mt-8">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div>
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">Certificates & Trainings</h2>
+              <p className="text-lg text-gray-600">
+                All members of our team are fully trained and certified professionals. We take pride in ensuring that every staff member meets or exceeds industry standards through continuous education and rigorous certification processes. Our company holds all the relevant licenses and certifications required to perform our work safely, legally, and to the highest professional standard.
+              </p>
+            </div>
+          </div>
+        </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="bg-green-50 p-8 rounded-lg">
             <h3 className="text-xl font-semibold text-green-800 mb-4">Our Mission</h3>
@@ -47,28 +58,29 @@ export default function AboutUs() {
             </div>
           </div>
         </div>
-
+       
         <div className="mt-8">
           <h3 className="text-2xl font-semibold text-gray-900 mb-6">Our Team</h3>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
             <div className="text-center">
-              <div className="text-green-600 text-4xl font-bold mb-2">50+</div>
+              <div className="text-green-600 text-4xl font-bold mb-2">10+</div>
               <div className="text-gray-600">Expert Engineers</div>
             </div>
             <div className="text-center">
-              <div className="text-green-600 text-4xl font-bold mb-2">1000+</div>
+              <div className="text-green-600 text-4xl font-bold mb-2">100+</div>
               <div className="text-gray-600">Projects Completed</div>
             </div>
             <div className="text-center">
               <div className="text-green-600 text-4xl font-bold mb-2">10+</div>
               <div className="text-gray-600">Years Experience</div>
             </div>
-            <div className="text-center">
-              <div className="text-green-600 text-4xl font-bold mb-2">24/7</div>
-              <div className="text-gray-600">Support Available</div>
-            </div>
+           
           </div>
         </div>
+
+       
+
+        {/* Contact Section */}
       </div>
     </PageTemplate>
   );

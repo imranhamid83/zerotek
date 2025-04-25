@@ -21,11 +21,13 @@ export default function RootLayout({ children }) {
         <link rel="icon" href="/images/favicon.ico" type="image/png" />
       </head>
       <body
-        className={`${sourceSans.variable} font-sans antialiased bg-white`}
+        className={`${sourceSans.variable} font-sans antialiased bg-white overflow-x-hidden`}
       >
-        <Navigation />
-        <main className="min-h-screen">{children}</main>
-        <Footer />
+        <div className="w-full overflow-x-hidden">
+          <Navigation />
+          <main className="min-h-screen w-full">{children}</main>
+          <Footer />
+        </div>
       </body>
     </html>
   );

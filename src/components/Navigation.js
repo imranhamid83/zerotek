@@ -22,19 +22,25 @@ const Navigation = () => {
 
   const menuItems = [
     {
-      title: 'Solar & battery',
+      title: 'Solar',
       subItems: [
         { 
-          title: 'Residential', 
-          href: '/solar-battery/residential',
+          title: 'Solar Panels', 
+          href: '/solar-battery/solar-panels',
           description: 'Custom solar solutions for your home',
-          image: '/images/solar-panels.jpg'
+          image: '/images/solar/residential.jpg'
         },
         { 
-          title: 'Commercial', 
-          href: '/solar-battery/commercial',
-          description: 'Enterprise-grade solar systems',
-          image: '/images/solar-panels.jpg'
+          title: 'Batteries', 
+          href: '/solar-battery/batteries',
+          description: 'Enhance your solar system with a battery',
+          image: '/images/solar/commercial.jpg'
+        },
+        { 
+          title: 'Maintenance', 
+          href: '/solar-battery/maintenance',
+          description: 'Maintain your solar system',
+          image: '/images/solar/commercial.jpg'
         },
       ],
       dropdownImage: '/images/solar-panels.jpg'
@@ -49,16 +55,46 @@ const Navigation = () => {
           image: '/images/electrical-panels.jpg'
         },
         { 
-          title: 'Ventilation', 
-          href: '/electrical/ventilation',
-          description: 'Advanced ventilation systems',
+          title: 'Domestic Services', 
+          href: '/electrical/domestic-services',
+          description: 'Domestic electrical services',
           image: '/images/electrical-panels.jpg'
         },
       ],
       dropdownImage: '/images/electrical-panels.jpg'
     },
     {
-      title: 'About ZeroTek',
+      title: 'Ventilation',
+      subItems: [
+        { 
+          title: 'IEV', 
+          href: '/ventilation/iev',
+          description: 'Intermittent Extract Ventilation systems',
+          image: '/images/ventilation.jpg'
+        },
+        { 
+          title: 'CMEV', 
+          href: '/ventilation/cmev',
+          description: 'Continuous Mechanical Extract Ventilation',
+          image: '/images/ventilation.jpg'
+        },
+        { 
+          title: 'DMEV', 
+          href: '/ventilation/dmev',
+          description: 'Decentralized Mechanical Extract Ventilation',
+          image: '/images/ventilation.jpg'
+        },
+        { 
+          title: 'MVHR', 
+          href: '/ventilation/mvhr',
+          description: 'Mechanical Ventilation with Heat Recovery',
+          image: '/images/ventilation.jpg'
+        },
+      ],
+      dropdownImage: '/images/ventilation.jpg'
+    },
+    {
+      title: 'About Us',
       subItems: [
         { 
           title: 'About Us', 
@@ -81,7 +117,7 @@ const Navigation = () => {
       title: 'Advice & FAQs',
       subItems: [
         { 
-          title: 'Solar & Battery Advice', 
+          title: 'Solar &amp; Battery Advice', 
           href: '/advice-faqs/solarBatteryAdvice',
           description: 'Expert guidance on solar and battery systems'
         },
@@ -102,16 +138,16 @@ const Navigation = () => {
   return (
     <>
       <TopBar />
-      <nav className="bg-white shadow-sm pt-4">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between h-16">
-            <div className="flex items-center h-16">
+      <nav className="bg-white shadow-sm pt-2">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between h-14">
+            <div className="flex items-center h-14">
               <Link href="/" className="flex items-center h-full">
                 <Image
                   src="/images/logo.png"
                   alt="ZeroTek Logo"
-                  width={240}
-                  height={64}
+                  width={200}
+                  height={56}
                   className="h-full w-auto object-contain"
                 />
               </Link>
@@ -124,7 +160,7 @@ const Navigation = () => {
                 className="text-gray-800 hover:text-green-600 focus:outline-none"
               >
                 <svg
-                  className="h-6 w-6"
+                  className="h-5 w-5"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -157,7 +193,7 @@ const Navigation = () => {
                     className="relative group"
                   >
                     <button 
-                      className="text-gray-800 hover:text-green-600 px-4 py-2 rounded-md text-lg font-semibold tracking-wide transition-colors duration-200 cursor-pointer"
+                      className="text-gray-800 hover:text-green-600 px-3 py-1.5 rounded-md text-base font-semibold tracking-wide transition-colors duration-200 cursor-pointer"
                       onMouseEnter={() => setActiveMenu(index)}
                     >
                       {item.title}
@@ -170,7 +206,10 @@ const Navigation = () => {
                       }`}
                       onMouseEnter={() => setActiveMenu(index)}
                       onMouseLeave={() => setActiveMenu(null)}
-                      style={{ top: 'calc(100% + 0.5rem)' }}
+                      style={{ 
+                        top: 'calc(100% + 0.5rem)',
+                        maxWidth: 'calc(100vw - 2rem)'
+                      }}
                     >
                       <div className="flex">
                         {item.dropdownImage && (
@@ -207,7 +246,7 @@ const Navigation = () => {
             <div className="hidden lg:flex items-center">
               <Link
                 href="/contact"
-                className="bg-green-600 text-white px-6 py-2.5 rounded-md text-lg font-semibold tracking-wide hover:bg-green-700 transition-colors duration-200 cursor-pointer"
+                className="bg-green-600 text-white px-4 py-1.5 rounded-md text-base font-semibold tracking-wide hover:bg-green-700 transition-colors duration-200 cursor-pointer"
               >
                 Contact Us
               </Link>
