@@ -75,7 +75,7 @@ const Navigation = () => {
         { 
           title: 'CMEV', 
           href: '/ventilation/cmev',
-          description: 'Continuous Mechanical Extract Ventilation',
+          description: 'Central Mechanical Extract Ventilation',
           image: '/images/ventilation.jpg'
         },
         { 
