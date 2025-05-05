@@ -61,7 +61,7 @@ const Navigation = () => {
           image: '/images/electrical-panels.jpg'
         },
       ],
-      dropdownImage: '/images/electrical-panels.jpg'
+      dropdownImage: '/images/electrical/zerotek-electrical-panels.jpg'
     },
     {
       title: 'Ventilation',

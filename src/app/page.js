@@ -18,7 +18,7 @@ export default function Home() {
     {
       title: "Electrical Services",
       description: "Expert electrical installations and maintenance services.",
-      image: "/images/electrical-panels.jpg",
+      image: "/images/electrical/zerotek-electrical-panels.jpg",
       href: "/services/electrical"
     },
     {
