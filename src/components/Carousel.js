@@ -35,13 +35,13 @@ const Carousel = () => {
   };
 
   const slides = [
-    {
+  /*   {
       title: 'Welcome to ZeroTEK',
       subtitle: 'Your trusted partner for solar, battery, and electrical solutions',
       buttonText: 'Learn More',
       buttonLink: '/about/about-us',
       bgColor: 'bg-green-600',
-    },
+    }, */
     {
       title: 'Get EV charger from £999 only',
       subtitle: 'supplied and fitted',

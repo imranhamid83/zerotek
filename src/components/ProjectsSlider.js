@@ -12,42 +12,42 @@ const ProjectsSlider = () => {
     {
       title: "Residential Solar Installation",
       description: "5kW solar system with battery storage for a family home in London",
-      image: "/images/projects/residential-solar.jpg",
+      image: "/images/cmev/Central-Mechanical-Extract-Ventilation-pipe-device.jpeg",
       location: "London, UK",
       href: "/about/our-projects"
     },
     {
       title: "Commercial Solar Farm",
       description: "100kW solar array installation for a manufacturing facility",
-      image: "/images/projects/commercial-solar.jpg",
+      image: "/images/cmev/Central-Mechanical-Extract-Ventilation-pipes-project-work.jpeg",
       location: "Manchester, UK",
       href: "/about/our-projects"
     },
     {
       title: "EV Charging Hub",
       description: "Installation of 10 charging points with smart management system",
-      image: "/images/projects/ev-charging.jpg",
+      image: "/images/cmev/Central-Mechanical-Extract-Ventilation-pipes.jpeg",
       location: "Birmingham, UK",
       href: "/about/our-projects"
     },
     {
       title: "Industrial Ventilation System",
       description: "Advanced ventilation solution for a large warehouse facility",
-      image: "/images/projects/ventilation.jpg",
+      image: "/images/electrical/ZeroTek-Consumer-unit.jpeg",
       location: "Leeds, UK",
       href: "/about/our-projects"
     },
     {
       title: "Battery Storage Facility",
       description: "Large-scale battery storage system for grid stability",
-      image: "/images/projects/battery-storage.jpg",
+      image: "/images/electrical/ZeroTek-electric-wiring.jpeg",
       location: "Glasgow, UK",
       href: "/about/our-projects"
     },
     {
       title: "Smart Home Integration",
       description: "Complete smart home solution with solar and battery backup",
-      image: "/images/projects/smart-home.jpg",
+      image: "/images/cmev/CMEV-installation-pipe.jpeg",
       location: "Bristol, UK",
       href: "/about/our-projects"
     }

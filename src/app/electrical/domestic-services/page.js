@@ -14,7 +14,7 @@ const DomesticServices = () => {
         'Surge protection devices',
         'Compliance with latest regulations'
       ],
-      image: '/images/electrical/consumer-unit.jpg'
+      image: '/images/electrical/ZeroTek-Consumer-unit.jpeg'
     },
     {
       title: 'Lighting Solutions',
@@ -25,7 +25,7 @@ const DomesticServices = () => {
         'Outdoor lighting',
         'Emergency lighting'
       ],
-      image: '/images/electrical/lighting.jpg'
+      image: '/images/electrical/lighting-solutions-zerotek.jpg'
     },
     {
       title: 'Socket & Switch Installations',
@@ -36,7 +36,7 @@ const DomesticServices = () => {
         'Smart switches',
         'Safety socket covers'
       ],
-      image: '/images/electrical/sockets.jpg'
+      image: '/images/electrical/ZeroTek-electric-wiring.jpeg'
     },
     {
       title: 'Rewiring Services',
@@ -47,7 +47,7 @@ const DomesticServices = () => {
         'Period property rewiring',
         'Safety inspections'
       ],
-      image: '/images/electrical/rewiring.jpg'
+      image: '/images/mvhr/Mechanical-Ventilation-Heat-Recovery-cabling.jpeg'
     },
     {
       title: 'Electrical Safety Inspections',
@@ -58,7 +58,7 @@ const DomesticServices = () => {
         'Homebuyer reports',
         'Periodic inspections'
       ],
-      image: '/images/electrical/inspection.jpg'
+      image: '/images/electrical/ZeroTek-EICR-testing.jpg'
     },
     {
       title: 'Smart Home Integration',
@@ -69,7 +69,7 @@ const DomesticServices = () => {
         'Security system integration',
         'Energy monitoring'
       ],
-      image: '/images/electrical/smart-home.jpg'
+      image: '/images/electrical/smarthome-hero-zerotek.jpg'
     }
   ];
 

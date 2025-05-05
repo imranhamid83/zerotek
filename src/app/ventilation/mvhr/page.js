@@ -64,7 +64,7 @@ const MVHR = () => {
 
           <div className="relative h-[500px] rounded-lg overflow-hidden">
             <Image
-              src="/images/ventilation/mvhr.jpg"
+              src="/images/mvhr/Mechanical-Ventilation-Heat-Recovery-installation.jpeg"
               alt="Mechanical Ventilation with Heat Recovery System"
               fill
               className="object-cover"

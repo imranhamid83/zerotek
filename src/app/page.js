@@ -6,6 +6,7 @@ import Link from "next/link";
 import ProjectsSlider from "@/components/ProjectsSlider";
 import Carousel from '@/components/Carousel';
 
+
 export default function Home() {
   const services = [
     {
@@ -23,7 +24,7 @@ export default function Home() {
     {
       title: "Mechanical Ventilation with Heat Recovery (MVHR)",
       description: "MVHR systems provide whole-house ventilation while recovering heat from extracted air...",
-      image: "/images/mvhr.jpg",
+      image: "/images/mvhr/Mechanical-Ventilation-Heat-Recovery-installation.jpeg",
       href: "/ventilation/mvhr"
     }
   ];
@@ -72,7 +73,7 @@ export default function Home() {
           <ProjectsSlider />
         </div>
 
-        <div className="mt-16">
+   {/*      <div className="mt-16">
           <h2 className="text-3xl font-bold text-gray-900 mb-8">Our Trusted Partners</h2>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center">
             {partners.map((partner, index) => (
@@ -87,7 +88,7 @@ export default function Home() {
               </div>
             ))}
           </div>
-        </div>
+        </div>  */}       
       </PageTemplate>
     </>
   );
