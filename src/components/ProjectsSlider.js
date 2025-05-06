@@ -12,42 +12,42 @@ const ProjectsSlider = () => {
     {
       title: "Residential Solar Installation",
       description: "5kW solar system with battery storage for a family home in London",
-      image: "/images/cmev/Central-Mechanical-Extract-Ventilation-pipe-device.jpeg",
+      image: "/images/cmev-Central-Mechanical-Extract-Ventilation-pipe-device.jpeg",
       location: "London, UK",
       href: "/about/our-projects"
     },
     {
       title: "Commercial Solar Farm",
       description: "100kW solar array installation for a manufacturing facility",
-      image: "/images/cmev/Central-Mechanical-Extract-Ventilation-pipes-project-work.jpeg",
+      image: "/images/cmev-Central-Mechanical-Extract-Ventilation-pipes-project-work.jpeg",
       location: "Manchester, UK",
       href: "/about/our-projects"
     },
     {
       title: "EV Charging Hub",
       description: "Installation of 10 charging points with smart management system",
-      image: "/images/cmev/Central-Mechanical-Extract-Ventilation-pipes.jpeg",
+      image: "/images/cmev-Central-Mechanical-Extract-Ventilation-pipes.jpeg",
       location: "Birmingham, UK",
       href: "/about/our-projects"
     },
     {
       title: "Industrial Ventilation System",
       description: "Advanced ventilation solution for a large warehouse facility",
-      image: "/images/electrical/ZeroTek-Consumer-unit.jpeg",
+      image: "/images/electrical-ZeroTek-Consumer-unit.jpeg",
       location: "Leeds, UK",
       href: "/about/our-projects"
     },
     {
       title: "Battery Storage Facility",
       description: "Large-scale battery storage system for grid stability",
-      image: "/images/electrical/ZeroTek-electric-wiring.jpeg",
+      image: "/images/electrical-ZeroTek-electric-wiring.jpeg",
       location: "Glasgow, UK",
       href: "/about/our-projects"
     },
     {
       title: "Smart Home Integration",
       description: "Complete smart home solution with solar and battery backup",
-      image: "/images/cmev/CMEV-installation-pipe.jpeg",
+      image: "/images/cmev-CMEV-installation-pipe.jpeg",
       location: "Bristol, UK",
       href: "/about/our-projects"
     }

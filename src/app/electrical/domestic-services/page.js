@@ -47,7 +47,7 @@ const DomesticServices = () => {
         'Period property rewiring',
         'Safety inspections'
       ],
-      image: '/images/mvhr/Mechanical-Ventilation-Heat-Recovery-cabling.jpeg'
+      image: '/images/mvhr-Mechanical-Ventilation-Heat-Recovery-cabling.jpeg'
     },
     {
       title: 'Electrical Safety Inspections',
