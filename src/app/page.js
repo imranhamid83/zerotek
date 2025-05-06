@@ -18,13 +18,13 @@ export default function Home() {
     {
       title: "Electrical Services",
       description: "Expert electrical installations and maintenance services.",
-      image: "/images/electrical/zerotek-electrical-panels.jpg",
+      image: "/images/electrical-zerotek-electrical-panels.jpg",
       href: "/services/electrical"
     },
     {
       title: "Mechanical Ventilation with Heat Recovery (MVHR)",
       description: "MVHR systems provide whole-house ventilation while recovering heat from extracted air...",
-      image: "/images/mvhr/Mechanical-Ventilation-Heat-Recovery-installation.jpeg",
+      image: "/images/mvhr-Mechanical-Ventilation-Heat-Recovery-installation.jpeg",
       href: "/ventilation/mvhr"
     }
   ];

@@ -64,7 +64,7 @@ const IEV = () => {
 
           <div className="relative h-[500px] rounded-lg overflow-hidden">
             <Image
-              src="/images/CMEV/Central-Mechanical-Extract-Ventilation-fan.jpeg"
+              src="/images/CMEV-Central-Mechanical-Extract-Ventilation-fan.jpeg"
               alt="Intermittent Extract Ventilation System"
               fill
               className="object-cover"

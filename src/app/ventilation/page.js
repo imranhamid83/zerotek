@@ -72,43 +72,7 @@ export default function Ventilation() {
           </div>
         </section>
 
-        {/* PIV Systems Section */}
-        <section className="mb-20">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Positive Input Ventilation (PIV)</h2>
-            <p className="text-lg text-gray-600 mb-6">
-              Our PIV systems create a fresh, healthy living environment by gently introducing filtered air into your home. Benefits include:
-            </p>
-            <ul className="list-disc list-inside text-gray-600 space-y-2 mb-6">
-              <li>Elimination of condensation</li>
-              <li>Improved air quality</li>
-              <li>Reduced allergens</li>
-              <li>Energy-efficient operation</li>
-            </ul>
-            <Link href="/ventilation/piv" className="inline-block bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition-colors">
-              Explore PIV Solutions
-            </Link>
-          </div>
-        </section>
-
-        {/* Extract Fans Section */}
-        <section className="mb-20">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Extract Fans</h2>
-            <p className="text-lg text-gray-600 mb-6">
-              Our range of extract fans provides efficient ventilation for specific areas of your home. Features include:
-            </p>
-            <ul className="list-disc list-inside text-gray-600 space-y-2 mb-6">
-              <li>Humidity sensing technology</li>
-              <li>Timer controls</li>
-              <li>Low noise operation</li>
-              <li>Energy-efficient motors</li>
-            </ul>
-            <Link href="/ventilation/extract-fans" className="inline-block bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition-colors">
-              View Extract Fan Range
-            </Link>
-          </div>
-        </section>
+       
 
         {/* Why Choose Us Section */}
         <section className="bg-gray-50 rounded-2xl p-12 mb-20">

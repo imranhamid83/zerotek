@@ -64,7 +64,7 @@ const DMEV = () => {
 
           <div className="relative h-[500px] rounded-lg overflow-hidden">
             <Image
-              src="/images/dmev/Decentral-mechanical-extract-ventilation-fan-extractor.jpeg"
+              src="/images/dmev-Decentral-mechanical-extract-ventilation-fan-extractor.jpeg"
               alt="Decentralized Mechanical Extract Ventilation System"
               fill
               className="object-cover"
