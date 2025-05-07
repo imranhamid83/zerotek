@@ -72,8 +72,6 @@ export default function Ventilation() {
           </div>
         </section>
 
-       
-
         {/* Why Choose Us Section */}
         <section className="bg-gray-50 rounded-2xl p-12 mb-20">
           <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Why Choose Our Ventilation Solutions?</h2>

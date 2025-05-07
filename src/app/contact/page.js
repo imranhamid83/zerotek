@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import PageTemplate from '@/components/PageTemplate';
+import Link from 'next/link';
 
 const ContactUs = () => {
   const [formData, setFormData] = useState({
@@ -62,98 +63,137 @@ ${formData.query}
   };
 
   return (
-    <PageTemplate>
-      <div className="max-w-4xl mx-auto px-4 py-12">
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">Contact Us</h1>
-          <p className="text-lg text-gray-600">
-            Have a question or need assistance? Fill out the form below and we&apos;ll get back to you as soon as possible.
-          </p>
-        </div>
-
-        <div className="bg-white rounded-lg shadow-lg p-8">
-          <form onSubmit={handleSubmit} className="space-y-6">
-            <div>
-              <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
-                Name <span className="text-red-500">*</span>
-              </label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                value={formData.name}
-                onChange={handleChange}
-                className={`w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 ${
-                  errors.name ? 'border-red-500' : 'border-gray-300'
-                }`}
-                placeholder="Enter your name"
-              />
-              {errors.name && <p className="mt-1 text-sm text-red-500">{errors.name}</p>}
-            </div>
-
-            <div>
-              <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
-                Email <span className="text-red-500">*</span>
-              </label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
-                className={`w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 ${
-                  errors.email ? 'border-red-500' : 'border-gray-300'
-                }`}
-                placeholder="Enter your email"
-              />
-              {errors.email && <p className="mt-1 text-sm text-red-500">{errors.email}</p>}
-            </div>
-
-            <div>
-              <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">
-                Phone Number
-              </label>
-              <input
-                type="tel"
-                id="phone"
-                name="phone"
-                value={formData.phone}
-                onChange={handleChange}
-                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
-                placeholder="Enter your phone number (optional)"
-              />
-            </div>
-
-            <div>
-              <label htmlFor="query" className="block text-sm font-medium text-gray-700 mb-1">
-                Your Query <span className="text-red-500">*</span>
-              </label>
-              <textarea
-                id="query"
-                name="query"
-                value={formData.query}
-                onChange={handleChange}
-                rows={6}
-                className={`w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 ${
-                  errors.query ? 'border-red-500' : 'border-gray-300'
-                }`}
-                placeholder="Enter your query"
-              />
-              {errors.query && <p className="mt-1 text-sm text-red-500">{errors.query}</p>}
-            </div>
-
-            <div>
-              <button
-                type="submit"
-                className="w-full bg-green-600 text-white py-3 px-6 rounded-md font-medium hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 cursor-pointer"
-              >
-                Send Message
-              </button>
-            </div>
-          </form>
+    <div className="min-h-screen bg-white">
+      {/* Hero Section */}
+      <div className="bg-green-600 py-20">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="text-center text-white">
+            <h1 className="text-4xl md:text-6xl font-bold mb-4">Contact Us</h1>
+            <p className="text-xl md:text-2xl">Get in touch with our team</p>
+          </div>
         </div>
       </div>
-    </PageTemplate>
+
+      {/* Main Content */}
+      <div className="max-w-7xl mx-auto px-4 py-16">
+        {/* Contact Information Section */}
+        <section className="mb-20">
+          <div className="max-w-3xl mx-auto">
+            <div className="bg-gray-50 rounded-2xl p-12 mb-12">
+              <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Contact Information</h2>
+              <div className="grid md:grid-cols-2 gap-8">
+                <div className="text-center">
+                  <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                    </svg>
+                  </div>
+                  <h3 className="text-xl font-semibold mb-2">Phone</h3>
+                  <a href="tel:01494314971" className="text-green-600 text-xl hover:text-green-700 transition-colors">
+                    01494 314 971
+                  </a>
+                </div>
+                <div className="text-center">
+                  <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                  </div>
+                  <h3 className="text-xl font-semibold mb-2">Email</h3>
+                  <a href="mailto:hello@zero-tek.co.uk" className="text-green-600 text-xl hover:text-green-700 transition-colors">
+                    hello@zero-tek.co.uk
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            {/* Contact Form Section */}
+            <div className="bg-white rounded-2xl shadow-lg p-8">
+              <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Send Us a Message</h2>
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div>
+                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
+                    Name <span className="text-red-500">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    className={`w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 ${
+                      errors.name ? 'border-red-500' : 'border-gray-300'
+                    }`}
+                    placeholder="Enter your name"
+                  />
+                  {errors.name && <p className="mt-1 text-sm text-red-500">{errors.name}</p>}
+                </div>
+
+                <div>
+                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
+                    Email <span className="text-red-500">*</span>
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    className={`w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 ${
+                      errors.email ? 'border-red-500' : 'border-gray-300'
+                    }`}
+                    placeholder="Enter your email"
+                  />
+                  {errors.email && <p className="mt-1 text-sm text-red-500">{errors.email}</p>}
+                </div>
+
+                <div>
+                  <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">
+                    Phone Number
+                  </label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    value={formData.phone}
+                    onChange={handleChange}
+                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+                    placeholder="Enter your phone number (optional)"
+                  />
+                </div>
+
+                <div>
+                  <label htmlFor="query" className="block text-sm font-medium text-gray-700 mb-1">
+                    Your Query <span className="text-red-500">*</span>
+                  </label>
+                  <textarea
+                    id="query"
+                    name="query"
+                    value={formData.query}
+                    onChange={handleChange}
+                    rows={6}
+                    className={`w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 ${
+                      errors.query ? 'border-red-500' : 'border-gray-300'
+                    }`}
+                    placeholder="Enter your query"
+                  />
+                  {errors.query && <p className="mt-1 text-sm text-red-500">{errors.query}</p>}
+                </div>
+
+                <div className="text-center">
+                  <button
+                    type="submit"
+                    className="bg-green-600 text-white px-8 py-3 rounded-lg text-lg hover:bg-green-700 transition-colors"
+                  >
+                    Send Message
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
   );
 };
 

@@ -7,6 +7,7 @@ import Link from 'next/link';
 const ProjectsSlider = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
   const projects = [
     {
@@ -53,17 +54,31 @@ const ProjectsSlider = () => {
     }
   ];
 
+  // Check if mobile on mount and window resize
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
   const nextSlide = () => {
     if (isTransitioning) return;
     setIsTransitioning(true);
-    setCurrentIndex((prev) => (prev + 1) % (projects.length - 2));
+    const maxIndex = isMobile ? projects.length - 1 : projects.length - 3;
+    setCurrentIndex((prev) => (prev + 1) % maxIndex);
     setTimeout(() => setIsTransitioning(false), 500);
   };
 
   const prevSlide = () => {
     if (isTransitioning) return;
     setIsTransitioning(true);
-    setCurrentIndex((prev) => (prev - 1 + (projects.length - 2)) % (projects.length - 2));
+    const maxIndex = isMobile ? projects.length - 1 : projects.length - 3;
+    setCurrentIndex((prev) => (prev - 1 + maxIndex) % maxIndex);
     setTimeout(() => setIsTransitioning(false), 500);
   };
 
@@ -73,17 +88,22 @@ const ProjectsSlider = () => {
       nextSlide();
     }, 5000);
     return () => clearInterval(timer);
-  }, [currentIndex]);
+  }, [currentIndex, isMobile]);
 
   return (
     <div className="relative">
       <div className="overflow-hidden">
         <div 
           className="flex transition-transform duration-500 ease-in-out"
-          style={{ transform: `translateX(-${currentIndex * 33.33}%)` }}
+          style={{ 
+            transform: `translateX(-${currentIndex * (isMobile ? 100 : 33.33)}%)`
+          }}
         >
           {projects.map((project, index) => (
-            <div key={index} className="w-1/3 flex-shrink-0 px-4">
+            <div 
+              key={index} 
+              className={`${isMobile ? 'w-full' : 'w-1/3'} flex-shrink-0 px-4`}
+            >
               <div className="bg-white rounded-lg shadow-lg overflow-hidden h-full transform transition-transform duration-300 hover:scale-105">
                 <div className="relative h-64">
                   <Image
@@ -133,7 +153,7 @@ const ProjectsSlider = () => {
       </button>
 
       <div className="flex justify-center mt-8 space-x-2">
-        {[...Array(projects.length - 2)].map((_, index) => (
+        {[...Array(isMobile ? projects.length : projects.length - 2)].map((_, index) => (
           <button
             key={index}
             onClick={() => {

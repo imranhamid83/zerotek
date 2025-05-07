@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Slider from 'react-slick';
+import Image from 'next/image';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
@@ -55,6 +56,7 @@ const Carousel = () => {
       buttonText: 'Learn More',
       buttonLink: '/ventilation',
       bgColor: 'bg-green-800',
+      image: '/images/cmev-Central-Mechanical-Extract-Ventilation-pipes-project-work.jpeg',
     },
   ];
 
@@ -87,20 +89,39 @@ const Carousel = () => {
       `}</style>
       <Slider {...settings}>
         {slides.map((slide, index) => (
-          <div key={index} className={`${slide.bgColor} h-[400px] flex items-center justify-center`}>
-            <div className="text-center max-w-3xl px-4 mx-auto mt-16">
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-white">
-                {slide.title}
-              </h2>
-              <p className="text-lg sm:text-xl md:text-2xl mb-8 text-white/90">
-                {slide.subtitle}
-              </p>
-              <a
-                href={slide.buttonLink}
-                className="inline-block bg-white text-green-600 hover:bg-gray-100 px-6 sm:px-8 py-2 sm:py-3 rounded-md text-base sm:text-lg font-semibold transition-colors duration-200"
-              >
-                {slide.buttonText}
-              </a>
+          <div key={index} className={`${slide.bgColor} h-[400px] flex items-center justify-center relative overflow-hidden`}>
+            <div className="container mx-auto px-4 h-full">
+              <div className="flex items-center h-full">
+                {/* Left side - Text content */}
+                <div className="w-full md:w-1/2 text-left pr-8">
+                  <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-white">
+                    {slide.title}
+                  </h2>
+                  <p className="text-lg sm:text-xl md:text-2xl mb-8 text-white/90">
+                    {slide.subtitle}
+                  </p>
+                  <a
+                    href={slide.buttonLink}
+                    className="inline-block bg-white text-green-600 hover:bg-gray-100 px-6 sm:px-8 py-2 sm:py-3 rounded-md text-base sm:text-lg font-semibold transition-colors duration-200"
+                  >
+                    {slide.buttonText}
+                  </a>
+                </div>
+
+                {/* Right side - Image */}
+                {slide.image && (
+                  <div className="hidden md:block w-1/2 h-full relative">
+                    <div className="absolute inset-0 bg-black/30 z-10"></div>
+                    <Image
+                      src={slide.image}
+                      alt={slide.title}
+                      fill
+                      className="object-cover opacity-70"
+                      priority={index === 0}
+                    />
+                  </div>
+                )}
+              </div>
             </div>
           </div>
         ))}
