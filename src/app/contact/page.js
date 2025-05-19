@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import PageTemplate from '@/components/PageTemplate';
 import Link from 'next/link';
+import { EmailClient } from '@azure/communication-email';
 
 const ContactUs = () => {
   const [formData, setFormData] = useState({
@@ -12,6 +13,8 @@ const ContactUs = () => {
     query: ''
   });
   const [errors, setErrors] = useState({});
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState({ success: false, message: '' });
 
   const validateForm = () => {
     const newErrors = {};
@@ -45,21 +48,93 @@ const ContactUs = () => {
     }
   };
 
-  const handleSubmit = (e) => {
+  const sendEmail = async (to, subject, content) => {
+    const connectionString = process.env.NEXT_PUBLIC_AZURE_COMMUNICATION_CONNECTION_STRING;
+    
+    if (!connectionString) {
+      throw new Error('Azure Communication connection string is not configured');
+    }
+
+    const emailClient = new EmailClient(connectionString);
+
+    const message = {
+      senderAddress: "DoNotReply@zero-tek.co.uk",
+      content: {
+        subject: subject,
+        plainText: content,
+      },
+      recipients: {
+        to: [{ address: to }],
+      },
+    };
+
+    try {
+      const poller = await emailClient.beginSend(message);
+      const result = await poller.pollUntilDone();
+      return result;
+    } catch (error) {
+      console.error('Error sending email:', error);
+      throw error;
+    }
+  };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (!validateForm()) return;
 
-    const subject = `Contact Form Submission from ${formData.name}`;
-    const body = `
+    setIsSubmitting(true);
+    setSubmitStatus({ success: false, message: '' });
+
+    try {
+      // Send acknowledgment email to user
+      const userAckContent = `
+Dear ${formData.name},
+
+Thank you for contacting ZeroTEK. We have received your message and will get back to you shortly.
+
+Your message details:
+${formData.query}
+
+Best regards,
+ZeroTEK Team
+      `.trim();
+
+      await sendEmail(
+        formData.email,
+        'Thank you for contacting ZeroTEK',
+        userAckContent
+      );
+
+      // Send notification email to ZeroTEK
+      const adminContent = `
+New Contact Form Submission
+
 Name: ${formData.name}
 Email: ${formData.email}
 ${formData.phone ? `Phone: ${formData.phone}\n` : ''}
 Query:
 ${formData.query}
-    `.trim();
+      `.trim();
 
-    const mailtoLink = `mailto:imranhamid83@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    window.location.href = mailtoLink;
+      await sendEmail(
+        'hello@zero-tek.co.uk',
+        `Contact Form Submission from ${formData.name}`,
+        adminContent
+      );
+
+      setSubmitStatus({
+        success: true,
+        message: 'Thank you for your message. We will get back to you soon!'
+      });
+      setFormData({ name: '', email: '', phone: '', query: '' });
+    } catch (error) {
+      setSubmitStatus({
+        success: false,
+        message: 'Sorry, there was an error sending your message. Please try again later.'
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -110,6 +185,13 @@ ${formData.query}
             {/* Contact Form Section */}
             <div className="bg-white rounded-2xl shadow-lg p-8">
               <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Send Us a Message</h2>
+              {submitStatus.message && (
+                <div className={`mb-6 p-4 rounded-md ${
+                  submitStatus.success ? 'bg-green-50 text-green-700' : 'bg-red-50 text-red-700'
+                }`}>
+                  {submitStatus.message}
+                </div>
+              )}
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
@@ -125,6 +207,7 @@ ${formData.query}
                       errors.name ? 'border-red-500' : 'border-gray-300'
                     }`}
                     placeholder="Enter your name"
+                    disabled={isSubmitting}
                   />
                   {errors.name && <p className="mt-1 text-sm text-red-500">{errors.name}</p>}
                 </div>
@@ -143,6 +226,7 @@ ${formData.query}
                       errors.email ? 'border-red-500' : 'border-gray-300'
                     }`}
                     placeholder="Enter your email"
+                    disabled={isSubmitting}
                   />
                   {errors.email && <p className="mt-1 text-sm text-red-500">{errors.email}</p>}
                 </div>
@@ -159,6 +243,7 @@ ${formData.query}
                     onChange={handleChange}
                     className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
                     placeholder="Enter your phone number (optional)"
+                    disabled={isSubmitting}
                   />
                 </div>
 
@@ -176,6 +261,7 @@ ${formData.query}
                       errors.query ? 'border-red-500' : 'border-gray-300'
                     }`}
                     placeholder="Enter your query"
+                    disabled={isSubmitting}
                   />
                   {errors.query && <p className="mt-1 text-sm text-red-500">{errors.query}</p>}
                 </div>
@@ -183,9 +269,12 @@ ${formData.query}
                 <div className="text-center">
                   <button
                     type="submit"
-                    className="bg-green-600 text-white px-8 py-3 rounded-lg text-lg hover:bg-green-700 transition-colors"
+                    className={`bg-green-600 text-white px-8 py-3 rounded-lg text-lg transition-colors ${
+                      isSubmitting ? 'opacity-50 cursor-not-allowed' : 'hover:bg-green-700'
+                    }`}
+                    disabled={isSubmitting}
                   >
-                    Send Message
+                    {isSubmitting ? 'Sending...' : 'Send Message'}
                   </button>
                 </div>
               </form>

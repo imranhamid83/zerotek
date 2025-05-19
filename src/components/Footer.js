@@ -93,7 +93,7 @@ const Footer = () => {
             </div>
             <div className="text-center md:text-right">
               <p className="text-gray-400 text-sm">
-                &copy; {new Date().getFullYear()} ZeroTek. All rights reserved.
+                &copy; {new Date().getFullYear()} ZeroTek Group Limited. All rights reserved.
               </p>
               <div className="mt-2 space-x-4">
                 <Link href="/privacy" className="text-gray-400 hover:text-green-400 text-sm">
